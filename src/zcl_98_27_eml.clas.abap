@@ -17,9 +17,7 @@ CLASS zcl_98_27_eml IMPLEMENTATION.
            ENTITY /dmo/agency
            UPDATE FIELDS ( name )
            WITH agencies_upd
-
            FAILED DATA(ls_failed)
-
            REPORTED DATA(ls_reported).
 
     IF ls_failed IS INITIAL.
