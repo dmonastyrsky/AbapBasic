@@ -1,4 +1,4 @@
-CLASS zcl_98_data_objects DEFINITION
+CLASS zcl_98_03_data_objects DEFINITION
   PUBLIC
   FINAL
   CREATE PUBLIC .
@@ -12,7 +12,7 @@ ENDCLASS.
 
 
 
-CLASS zcl_98_data_objects IMPLEMENTATION.
+CLASS zcl_98_03_data_objects IMPLEMENTATION.
 
 
   METHOD if_oo_adt_classrun~main.

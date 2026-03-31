@@ -1,4 +1,4 @@
-CLASS zcl_98_conditional_branching DEFINITION
+CLASS zcl_98_06_conditional_branch DEFINITION
   PUBLIC
   FINAL
   CREATE PUBLIC .
@@ -12,7 +12,7 @@ ENDCLASS.
 
 
 
-CLASS zcl_98_conditional_branching IMPLEMENTATION.
+CLASS zcl_98_06_conditional_branch IMPLEMENTATION.
 
 
   METHOD if_oo_adt_classrun~main.

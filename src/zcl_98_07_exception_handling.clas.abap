@@ -1,4 +1,4 @@
-CLASS zcl_98_exception_handling DEFINITION
+CLASS zcl_98_07_exception_handling DEFINITION
   PUBLIC
   FINAL
   CREATE PUBLIC .
@@ -12,7 +12,7 @@ ENDCLASS.
 
 
 
-CLASS zcl_98_exception_handling IMPLEMENTATION.
+CLASS zcl_98_07_exception_handling IMPLEMENTATION.
 
 
   METHOD if_oo_adt_classrun~main.

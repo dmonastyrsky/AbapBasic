@@ -3,9 +3,9 @@
  <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
   <asx:values>
    <VSEOCLASS>
-    <CLSNAME>ZCL_98_CONDITIONAL_BRANCHING</CLSNAME>
+    <CLSNAME>ZCL_98_08_ITERATION</CLSNAME>
     <LANGU>E</LANGU>
-    <DESCRIPT>Conditional Branching</DESCRIPT>
+    <DESCRIPT>Iterations</DESCRIPT>
     <STATE>1</STATE>
     <CLSCCINCL>X</CLSCCINCL>
     <FIXPT>X</FIXPT>

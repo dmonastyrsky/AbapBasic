@@ -1,4 +1,4 @@
-CLASS zcl_98_abap_types DEFINITION
+CLASS zcl_98_02_abap_types DEFINITION
   PUBLIC
   FINAL
   CREATE PUBLIC .
@@ -12,7 +12,7 @@ ENDCLASS.
 
 
 
-CLASS zcl_98_abap_types IMPLEMENTATION.
+CLASS zcl_98_02_abap_types IMPLEMENTATION.
 
 
   METHOD if_oo_adt_classrun~main.

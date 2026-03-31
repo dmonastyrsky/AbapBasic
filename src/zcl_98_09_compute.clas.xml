@@ -3,7 +3,7 @@
  <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
   <asx:values>
    <VSEOCLASS>
-    <CLSNAME>ZCL_98_COMPUTE</CLSNAME>
+    <CLSNAME>ZCL_98_09_COMPUTE</CLSNAME>
     <LANGU>E</LANGU>
     <DESCRIPT>Variable Declaration</DESCRIPT>
     <STATE>1</STATE>

@@ -1,4 +1,4 @@
-CLASS zcl_98_iteration DEFINITION
+CLASS zcl_98_08_iteration DEFINITION
   PUBLIC
   FINAL
   CREATE PUBLIC .
@@ -12,7 +12,7 @@ ENDCLASS.
 
 
 
-CLASS zcl_98_iteration IMPLEMENTATION.
+CLASS zcl_98_08_iteration IMPLEMENTATION.
 
 
   METHOD if_oo_adt_classrun~main.

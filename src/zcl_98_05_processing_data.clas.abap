@@ -1,4 +1,4 @@
-CLASS zcl_98_processing_data DEFINITION
+CLASS zcl_98_05_processing_data DEFINITION
   PUBLIC
   FINAL
   CREATE PUBLIC .
@@ -12,7 +12,7 @@ ENDCLASS.
 
 
 
-CLASS zcl_98_processing_data IMPLEMENTATION.
+CLASS zcl_98_05_processing_data IMPLEMENTATION.
 
 
   METHOD if_oo_adt_classrun~main.

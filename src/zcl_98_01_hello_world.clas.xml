@@ -3,9 +3,9 @@
  <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
   <asx:values>
    <VSEOCLASS>
-    <CLSNAME>ZCL_98_DATA_OBJECTS</CLSNAME>
+    <CLSNAME>ZCL_98_01_HELLO_WORLD</CLSNAME>
     <LANGU>E</LANGU>
-    <DESCRIPT>Data Objects</DESCRIPT>
+    <DESCRIPT>Hello World App</DESCRIPT>
     <STATE>1</STATE>
     <CLSCCINCL>X</CLSCCINCL>
     <FIXPT>X</FIXPT>

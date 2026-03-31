@@ -1,4 +1,4 @@
-CLASS zcl_98_hello_world DEFINITION
+CLASS zcl_98_01_hello_world DEFINITION
   PUBLIC
   FINAL
   CREATE PUBLIC .
@@ -13,7 +13,7 @@ ENDCLASS.
 
 
 
-CLASS zcl_98_hello_world IMPLEMENTATION.
+CLASS zcl_98_01_hello_world IMPLEMENTATION.
 
 
   METHOD if_oo_adt_classrun~main.
