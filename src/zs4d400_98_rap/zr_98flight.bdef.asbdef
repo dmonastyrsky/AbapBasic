@@ -32,11 +32,14 @@ authorization master( global )
   update;
   delete;
 
+
   draft action Activate optimized;
   draft action Discard;
   draft action Edit;
   draft action Resume;
   draft determine action Prepare;
+
+  validation validatePrice on save { create; field Price; }
 
   mapping for Z98FLIGHT corresponding extensible
   {
