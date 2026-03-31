@@ -1,11 +1,11 @@
 CLASS lhc_zr_98flight DEFINITION INHERITING FROM cl_abap_behavior_handler.
   PRIVATE SECTION.
     METHODS get_global_authorizations FOR GLOBAL AUTHORIZATION
-              IMPORTING
-                 REQUEST requested_authorizations FOR Flight
-              RESULT result.
+      IMPORTING
+      REQUEST requested_authorizations FOR Flight
+      RESULT result.
     METHODS validatePrice FOR VALIDATE ON SAVE
-                  IMPORTING keys FOR Flight~validatePrice.
+      IMPORTING keys FOR Flight~validatePrice.
 ENDCLASS.
 
 
