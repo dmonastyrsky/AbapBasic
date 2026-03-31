@@ -2,16 +2,14 @@
 
 This repository contains the source code developed as part of the [Learning Basic ABAP Programming](https://learning.sap.com/courses/basic-abap-programming) course by SAP.
 
-## Project Overview
-The code demonstrates the core concepts of building business applications in an ABAP environment using **Eclipse ADT**.
-
-## Key Features
-- **Data Access:** Using ABAP SQL to read and manipulate data.
-- **Data Structures:** Working with internal tables (standard, sorted, hashed) and complex structures.
-- **OOP:** Implementation of local classes, methods, and event handling.
-- **RAP Model:** Business Object (BO) manipulation using **EML (Entity Manipulation Language)**.
-- **Service Definition:** Creating service definitions and bindings for OData services.
-
+### Course Structure Implementation:
+* **Units 1-2:** Basic techniques, data types, and arithmetic expressions.
+* **Unit 3:** Modularization using classes and methods.
+* **Unit 4:** Reading data from the database using ABAP SQL.
+* **Units 5-6:** Deep dive into structured data objects and complex internal tables (Standard, Sorted, Hashed).
+* **Unit 7:** Database updates and business logic implementation using Business Objects (Validations).
+* **Unit 8:** Exposure of data via the ABAP RESTful Application Programming Model (RAP), including CDS Views and OData Service Binding.
+* 
 ## Technologies Used
 - **ABAP Language** (Standard/Cloud optimized syntax)
 - **ABAP RESTful Application Programming Model (RAP)**
