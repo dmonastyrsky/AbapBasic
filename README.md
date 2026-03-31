@@ -9,7 +9,7 @@ This repository contains the source code developed as part of the [Learning Basi
 * **Units 5-6:** Deep dive into structured data objects and complex internal tables (Standard, Sorted, Hashed).
 * **Unit 7:** Database updates and business logic implementation using Business Objects (Validations).
 * **Unit 8:** Exposure of data via the ABAP RESTful Application Programming Model (RAP), including CDS Views and OData Service Binding.
-* 
+
 ### Repository Structure:
 The code is organized into packages reflecting the course units. Each package contains small, focused examples rather than a single integrated application.
 
@@ -30,6 +30,13 @@ This is a guided example based on course exercises.
 * Core Data Services (CDS)
 * Open SQL
 * ABAP Development Tools (ADT, Eclipse)
+
+### Key Learning Outcomes:
+* Built ABAP programs using modern syntax and expression-based constructs
+* Worked with Open SQL for data retrieval and processing
+* Applied object-oriented principles (classes, methods, encapsulation)
+* Modeled and processed structured data using internal tables
+* Implemented a basic RAP business object with CDS, behavior definition, and OData exposure
 
 ### Notes:
 * Learning-oriented codebase
