@@ -10,8 +10,28 @@ This repository contains the source code developed as part of the [Learning Basi
 * **Unit 7:** Database updates and business logic implementation using Business Objects (Validations).
 * **Unit 8:** Exposure of data via the ABAP RESTful Application Programming Model (RAP), including CDS Views and OData Service Binding.
 * 
-## Technologies Used
-- **ABAP Language** (Standard/Cloud optimized syntax)
-- **ABAP RESTful Application Programming Model (RAP)**
-- **CDS (Core Data Services)**
-- **EML (Entity Manipulation Language)**
+### Repository Structure:
+The code is organized into packages reflecting the course units. Each package contains small, focused examples rather than a single integrated application.
+
+* `src/...` – core exercises (syntax, SQL, OOP, internal tables)
+* `src/zs4d400_98_rap` – RAP example (CDS, Behavior, Service Binding)
+
+### RAP Scope:
+The RAP package includes:
+* CDS View Entity (data model)
+* Behavior Definition & Implementation (basic validations)
+* Service Definition and OData Binding
+
+This is a guided example based on course exercises.
+
+### Technologies Used:
+* ABAP (Cloud / Modern Syntax)
+* ABAP RESTful Application Programming Model (RAP)
+* Core Data Services (CDS)
+* Open SQL
+* ABAP Development Tools (ADT, Eclipse)
+
+### Notes:
+* Learning-oriented codebase
+* Focus on fundamentals, not production design
+* No advanced architecture or performance optimizations
