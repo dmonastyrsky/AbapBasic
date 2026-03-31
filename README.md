@@ -1,6 +1,6 @@
 # ABAP Cloud: Basic Programming Project
 
-This repository contains the source code developed as part of the [Basic ABAP Programming](https://learning.sap.com/courses/basic-abap-programming) course by SAP.
+This repository contains the source code developed as part of the [Learning Basic ABAP Programming](https://learning.sap.com/courses/basic-abap-programming) course by SAP.
 
 ## Technical Stack
 * **Language:** ABAP Cloud
