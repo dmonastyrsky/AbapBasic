@@ -12,38 +12,62 @@ CLASS zcl_98_28_copy_flight IMPLEMENTATION.
 
     DATA(lv_source_table) = '/DMO/FLIGHT'.
     DATA(lv_target_table) = 'Z98FLIGHT'.
-
     DATA lt_flights TYPE STANDARD TABLE OF z98flight WITH EMPTY KEY.
 
-    out->write( |Step 1: Reading data from { lv_source_table }...| ).
+    TRY.
+      out->write( |Step 1: Reading data from { lv_source_table }...| ).
 
-    SELECT FROM (lv_source_table)
-      FIELDS
-        client, carrier_id, connection_id, flight_date,
-        price, currency_code, plane_type_id, seats_max, seats_occupied
-      INTO CORRESPONDING FIELDS OF TABLE @lt_flights.
+      SELECT FROM (lv_source_table)
+        FIELDS
+          client, carrier_id, connection_id, flight_date,
+          price, currency_code, plane_type_id, seats_max, seats_occupied
+        INTO CORRESPONDING FIELDS OF TABLE @lt_flights.
 
-    out->write( |Step 2: Preparing technical RAP fields (Admin Data)...| ).
+      IF sy-subrc <> 0.
+        out->write( |WARNING: No data found in { lv_source_table }. Table is empty.| ).
+      ELSE.
+        out->write( |Found { lines( lt_flights ) } rows to copy.| ).
+      ENDIF.
 
-    GET TIME STAMP FIELD DATA(lv_timestamp).
+      IF lt_flights IS NOT INITIAL.
+        out->write( |Step 2: Preparing technical RAP fields (Admin Data)...| ).
 
-    LOOP AT lt_flights ASSIGNING FIELD-SYMBOL(<fs_flight>).
-      <fs_flight>-local_created_by      = sy-uname.
-      <fs_flight>-local_created_at      = lv_timestamp.
-      <fs_flight>-local_last_changed_by = sy-uname.
-      <fs_flight>-local_last_changed_at = lv_timestamp.
-      <fs_flight>-last_changed_at       = lv_timestamp.
-    ENDLOOP.
+        GET TIME STAMP FIELD DATA(lv_timestamp).
 
-    DELETE FROM (lv_target_table).
+        LOOP AT lt_flights ASSIGNING FIELD-SYMBOL(<fs_flight>).
+          <fs_flight>-local_created_by      = sy-uname.
+          <fs_flight>-local_created_at      = lv_timestamp.
+          <fs_flight>-local_last_changed_by = sy-uname.
+          <fs_flight>-local_last_changed_at = lv_timestamp.
+          <fs_flight>-last_changed_at       = lv_timestamp.
+        ENDLOOP.
 
-    INSERT (lv_target_table) FROM TABLE @lt_flights.
+        out->write( |Step 3: Deleting existing data from { lv_target_table }...| ).
+        DELETE FROM (lv_target_table).
 
-    IF sy-subrc = 0.
-      out->write( |SUCCESS: { lines( lt_flights ) } rows copied to { lv_target_table }.| ).
-    ELSE.
-      out->write( |ERROR: Could not insert data. Check if table { lv_target_table } is active.| ).
-    ENDIF.
+        out->write( |Step 4: Inserting new data into { lv_target_table }...| ).
+        INSERT (lv_target_table) FROM TABLE @lt_flights.
+
+        IF sy-subrc = 0.
+          COMMIT WORK.
+          out->write( |SUCCESS: { lines( lt_flights ) } rows copied to { lv_target_table }.| ).
+        ELSE.
+          ROLLBACK WORK.
+          out->write( |ERROR: Could not insert data. Check if table { lv_target_table } is active.| ).
+        ENDIF.
+      ELSE.
+        out->write( |Nothing to copy. Source table is empty.| ).
+      ENDIF.
+
+    CATCH cx_sy_sql_error INTO DATA(lx_sql_error).
+      ROLLBACK WORK.
+      out->write( |DATABASE ERROR: { lx_sql_error->get_text( ) }| ).
+
+    CATCH cx_root INTO DATA(lx_error).
+      ROLLBACK WORK.
+      out->write( |ERROR: { lx_error->get_text( ) }| ).
+
+    ENDTRY.
 
   ENDMETHOD.
 ENDCLASS.
